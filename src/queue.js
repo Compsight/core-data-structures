@@ -10,33 +10,45 @@ class Node {
 
 export default class Queue {
   constructor() {
-    this.front = null
+    this.begin = null
     this.end = null
     this.count = 0
   }
 
-  dequeue() {
-    const current = this.front
+  back() {
     return this.count === 0
-      ?(current)
-      :(this.front = current.proceeds,
+      ? null
+      : this.end.data
+  }
+
+  dequeue() {
+    const next = this.begin
+    return this.count === 0
+      ? next
+      :(this.begin = next.proceeds,
         this.count--,
-        current.data)
+        next.data)
   }
 
   enqueue(person) {
     this.count === 0
-      ?(this.front = new Node(person, this.front, this.end),
+      ?(this.end = new Node(person, this.begin, this.end),
+        this.begin = this.end,
         this.count++)
-      :(this.end = new Node(person, this.front, this.end))
+      :(this.end = new Node(person, this.begin, null),
+        this.count++)
+  }
+
+  front() {
+    return this.count === 0
+      ? null
+      : this.begin.data
   }
 
   isEmpty() {
-    if (this.count === 0) {
-      return true
-    } else {
-      return false
-    }
+    return this.count === 0
+      ? true
+      : false
   }
 
   length() {
