@@ -1,0 +1,166 @@
+
+Queue
+
+entities in the collection are kept in order . only operations on the
+collection are the addition of entities to the rear terminal position
+
+describe('Queue', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+
+
+
+Priority Queue
+
+like a regular queue or stack data structure, but where additionally each
+
+element has a "priority" associated with it.
+
+describe('Priority Queue', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+
+Set
+
+describe('Set', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+
+
+Linked List
+
+describe('Linked List', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+
+Doubly-Linked List
+
+describe('Doubly-Linked List', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+Hash Table
+
+describe('Hash Table', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+Binary Search Tree
+
+describe('Binary Search Tree', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
+
+Directed Graph
+
+describe('Directed Graph', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect(Stack).to.be.a('function')
+  })
+
+  context('push()', () => {
+    it('pushes an element to the top of the stack.', () => {
+      const myStack = new Stack()
+
+      expect(() => myStack.push('foo'))
+        .to.alter(() => myStack.length(), { from: 0, to: 1 })
+    })
+  })
+})
