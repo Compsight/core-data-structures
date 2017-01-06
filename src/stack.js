@@ -13,12 +13,32 @@ export default class Stack {
     this.size = 0
   }
 
-  push(value) {
-    this.top = new Node(value, this.top)
-    this.size++
+  isEmpty() {
+    return this.size === 0
   }
 
   length() {
     return this.size
   }
+
+  peek() {
+    return this.size === 0
+      ? null
+      : this.top.data
+  }
+
+  pop() {
+    const current = this.top
+    return this.size === 0
+      ? null
+      :(this.top = current.next,
+        this.size--,
+        current.data)
+  }
+
+  push(value) {
+    this.top = new Node(value, this.top)
+    this.size++
+  }
+
 }
