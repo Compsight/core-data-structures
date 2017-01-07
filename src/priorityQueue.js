@@ -1,15 +1,15 @@
 'use strict'
 
 class Node {
-  constructor(follows, data, priority, proceeds) {
-    this.after = follows
-    this.info = data
+  constructor(after, info, priority, before) {
+    this.after = after
+    this.info = info
     this.priority = priority
-    this.before = proceeds
+    this.before = before
   }
 }
 
-class priorityQueue {
+class PriorityQueue {
   constructor() {
     this.head = null
     this.tail = null
@@ -28,12 +28,12 @@ class priorityQueue {
           behind = behind.after
           inFront = behind.after
         },
-        inFront.before = element
-        element.after = inFront
-        element.before = behind
-        behind.after = element
+        inFront.before = element,
+        element.after = inFront,
+        element.before = behind,
+        behind.after = element)
   }
-  
+
   pQueue.front()               // returns the front element (highest priority) in queue or null if the queue is empty.
   pQueue.back()                // returns the back element (lowest priority) in the queue or null if the queue is empty.
   pQueue.dequeue()             // returns and removes the front element in the queue or null if the queue is empty.
