@@ -15,9 +15,8 @@ class PriorityQueue {
     this.tail = null
     this.count = 0
   }
-}
 
-  enqueue(value, num) {// adds an element with priority (number) to the back of the queue.
+  enqueue(value, num) { // adds an element with priority (number) to the back of the queue.
     let behind = this.tail
     let inFront = null
     const element = new Node(behind, value, num, inFront)
@@ -33,6 +32,7 @@ class PriorityQueue {
         element.before = behind,
         behind.after = element)
   }
+}
 
   pQueue.front()               // returns the front element (highest priority) in queue or null if the queue is empty.
   pQueue.back()                // returns the back element (lowest priority) in the queue or null if the queue is empty.
