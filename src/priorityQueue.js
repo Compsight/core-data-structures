@@ -1,7 +1,7 @@
 'use strict'
 
 class Node {
-  constructor(after, info, priority, before) {
+  constructor(after, info, priority=1, before) {
     this.after = after
     this.info = info
     this.priority = priority
@@ -23,10 +23,10 @@ class PriorityQueue {
     this.count === 0
       ?(this.tail = element,
         this.head = element)
-      :((while (num > behind.priority) {
+      :(() => (while (num > behind.priority) {
           behind = behind.after
           inFront = behind.after
-        }),
+        }()),
         inFront.before = element,
         element.after = inFront,
         element.before = behind,
